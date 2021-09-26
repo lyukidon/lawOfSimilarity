@@ -82,7 +82,13 @@ function MenuPage(props) {
             </div>
             <div>
                 {
-                    obj.map(c => c.type === 'froude' ? <Froude /> : <Reynolds />)
+                    obj.map(
+                            c => c.type === 'froude'
+                            ?
+                            <Froude scale={c.model/c.prototype} />
+                            :
+                            <Reynolds scale={c.model/c.prototype} />
+                        )
                 }
             </div>
         </div>

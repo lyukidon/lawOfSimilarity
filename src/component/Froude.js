@@ -21,6 +21,7 @@ function Froude(props) {
         <div>
             <div>Scale(축척): {model}/{prototype} {scale}</div>
             <div className="Geometrical Similarity">
+                <b>기하학적 상사</b>
                 <div>Length(길이): 
                     <input type="text" name="length" onChange={onChange} />
                     {data.length * scale}
@@ -35,6 +36,7 @@ function Froude(props) {
                 </div>
             </div>
             <div className="Kinematic Similarity">
+                <b>운동학적 상사</b>
                 <div>
                     Time(시간): 
                     <input type="text" name="time" onChange={onChange} />
@@ -61,6 +63,7 @@ function Froude(props) {
                     </div>
             </div>
             <div className="Dynamic Similarity">
+                <b>동력학적 상사</b>
                 <div>힘: 
                     <input type="text" name="force" onChange={onChange} />
                     {data.force * scale**(3)}

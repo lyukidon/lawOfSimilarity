@@ -85,14 +85,14 @@ function MenuPage(props) {
                     obj.map(function(current){
                         if (current.type === 'froude'){
                             return  <Froude
-                                        prototype={prototype}
-                                        model={model}
+                                        prototype={current.prototype}
+                                        model={current.model}
                                         scale={current.model/current.prototype}
                                     />
                         }else if (current.type === 'reynolds'){
                             return  <Reynolds
-                                        prototype={prototype}
-                                        model={model}
+                                        prototype={current.prototype}
+                                        model={current.model}
                                         scale={current.model/current.prototype}
                                     />
                         }
